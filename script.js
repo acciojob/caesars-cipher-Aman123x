@@ -41,8 +41,8 @@ function rot13(encodedStr) {
 	// }
 
  //  return decodedArr.join(''); //return decodedArr
-	let decod=" ";
-	for(let i=0;i<encodedStr;i++){
+	let decod="" ;
+	for(let i=0;i<encodedStr.length;i++){
 		if(lookup[encodedStr[i]]){
 			decod+=lookup[encodedStr[i]]
 		}
