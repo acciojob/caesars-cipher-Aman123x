@@ -43,7 +43,12 @@ function rot13(encodedStr) {
  //  return decodedArr.join(''); //return decodedArr
 	let decod="";
 	for(let i=0;i<encodedStr;i++){
-		decod+=lookup[encodedStr[i]]|| encodedStr[i];
+		if(lookup[encodedStr[i]]){
+			decod+=lookup[encodedStr[i]]
+		}
+		else{
+			decod+=encodedStr[i];
+		}
 	}
 	return decod;
 }
